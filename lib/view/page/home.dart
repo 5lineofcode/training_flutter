@@ -8,6 +8,8 @@ import 'package:training_app/view/page/firebase_example.dart';
 import 'package:training_app/view/page/form_registrasi.dart';
 import 'package:training_app/view/page/settings_page.dart';
 
+import 'gojek.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -173,6 +175,12 @@ class _HomePageState extends State<HomePage> {
                 RaisedButton(
                   onPressed: () {},
                   child: Text("Show Notification"),
+                ),
+                RaisedButton(
+                  onPressed: () {
+                    Page.replace(context, GojekPage());
+                  },
+                  child: Text("Buka Gojek"),
                 ),
                 getListView(),
                 Row(
